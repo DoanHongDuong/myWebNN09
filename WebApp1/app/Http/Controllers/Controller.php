@@ -21,6 +21,5 @@ class TestController extends Controller  // Cái "Controller" phải viết hoa
             echo "Chua du dieu kien bau cu";  // Điều kiện nếu tuổi <= 18
         }
     }
->>>>>>> 1e094ad73455c0f9736ec369838d17cedcbbb376
 }
 
