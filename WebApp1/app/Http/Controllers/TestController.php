@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;  // Nếu cần phải sử dụng Request, nếu không có thì có thể bỏ dòng này.
+use Illuminate\Http\Request;  
 
-class TestController extends Controller  // Cái "Controller" phải viết hoa
+class TestController extends Controller 
 {
     public function index()
     {
-        $duong = "Duong hehe";  // Chuỗi cần hiển thị
-        $test = true;            // Biến test
+        $duong = "Duong hehe";  
+        $test = true;            
 
-        echo $duong;             // In ra $duong
+        echo $duong;             
 
-        $tuoi = 20;              // Khai báo và gán giá trị cho biến $tuoi
+        $tuoi = 20;              
 
         if ($tuoi > 18) {
-            echo "Du dieu kien bau cu";  // Điều kiện nếu tuổi > 18
+            echo "Du dieu kien bau cu";  
         } else {
-            echo "Chua du dieu kien bau cu";  // Điều kiện nếu tuổi <= 18
+            echo "Chua du dieu kien bau cu";  
         }
     }
 }

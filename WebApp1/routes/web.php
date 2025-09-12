@@ -15,3 +15,4 @@ Route::get('/', function () {
 // //Route::get('/testController', [Duong::class, 'test']);
 
 Route::get('/hienthiSinhVien', 'App\Http\Controllers\SinhvienController@index');
+Route::get('/student', 'App\Http\Controllers\StudentController@readStudent');
