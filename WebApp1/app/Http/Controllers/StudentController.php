@@ -22,4 +22,18 @@ class StudentController
 
         return view('EditStudent', compact('student'));
     }
+    public function saveStudent(Request $request)
+    {
+        $id = $request->input('id');
+
+        $student = Student::findOrFail($id);
+
+        $student->update([
+            'studentName'  => $request->input('studentName'),
+            'studentClass' => $request->input('studentClass'),
+        ]);
+
+        $students = Student::all();
+        return view('Student', compact('student'));
+    }
 }

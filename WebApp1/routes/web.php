@@ -14,6 +14,18 @@ Route::get('/', function () {
 // // Route gọi Controller
 // //Route::get('/testController', [Duong::class, 'test']);
 
-Route::get('/hienthiSinhVien', 'App\Http\Controllers\SinhvienController@index');
-Route::get('/student', 'App\Http\Controllers\StudentController@readStudent');
-Route::get('/editStudent/{id}', 'App\Http\Controllers\StudentController@editStudent');
+// Hiển thị danh sách
+Route::get('/hienthiSinhVien', 'App\Http\Controllers\SinhvienController@index')
+    ->name('sinhvien.index');
+
+// Danh sách Student
+Route::get('/student', 'App\Http\Controllers\StudentController@readStudent')
+    ->name('student.index');
+
+// Edit student
+Route::get('/editStudent/{id}','App\Http\Controllers\StudentController@editStudent')
+    ->name('editStudent');
+
+// Save student
+Route::post('/saveStudent', 'App\Http\Controllers\StudentController@saveStudent')
+    ->name('student.save');
