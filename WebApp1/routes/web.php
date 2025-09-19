@@ -16,3 +16,4 @@ Route::get('/', function () {
 
 Route::get('/hienthiSinhVien', 'App\Http\Controllers\SinhvienController@index');
 Route::get('/student', 'App\Http\Controllers\StudentController@readStudent');
+Route::get('/editStudent/{id}', 'App\Http\Controllers\StudentController@editStudent');

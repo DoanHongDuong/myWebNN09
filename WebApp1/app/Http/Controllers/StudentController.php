@@ -12,4 +12,14 @@ class StudentController
         $student = Student::All();
         return view('Student', compact('student'));
     }
+
+
+    public function editStudent(Request $request)
+    {
+        $id = $request->id;
+
+        $student = Student::findOrFail($id);
+
+        return view('EditStudent', compact('student'));
+    }
 }
